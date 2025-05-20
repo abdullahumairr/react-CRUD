@@ -1,6 +1,6 @@
 import { Search } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => {
   return (
     <nav className="flex justify-between container mx-auto py-7">
       <img className="w-44 h-6" src="/nav/logo.png" alt="logo" />
@@ -9,7 +9,8 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search..."
-          className="bg-transparent focus:outline-none text-[#6A7282] "
+          className="bg-transparent focus:outline-none text-[#6A7282]"
+          onChange={(e) => onSearch(e.target.value)}
         />
       </button>
     </nav>

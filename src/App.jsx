@@ -1,13 +1,14 @@
-import Input from "./components/Input";
 import Navbar from "./components/Navbar";
-import Output from "./components/Output";
+import Notes from "./components/Notes";
+import { useState } from "react";
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState('');
+
   return (
     <>
-      <Navbar />
-      <Input />
-      <Output />
+      <Navbar onSearch={setSearchQuery} />
+      <Notes searchQuery={searchQuery} />
     </>
   );
 }
