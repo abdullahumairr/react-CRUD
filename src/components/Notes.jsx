@@ -26,7 +26,7 @@ const Notes = ({ searchQuery }) => {
   );
 
   const activeNotes = filteredNotes.filter((note) => !note.archived);
-  const archivedNotes = filteredNotes.filter((note) => note.archived);  
+  const archivedNotes = filteredNotes.filter((note) => note.archived);
 
   return (
     <>
